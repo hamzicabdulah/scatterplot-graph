@@ -1,0 +1,50 @@
+body {
+  background-image: url('http://goldwallpapers.com/uploads/posts/mountain-bike-wallpaper/mountain_bike_wallpaper_014.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+}
+svg {
+  margin: 2% 0;
+  background: white;
+  opacity: .88;
+  font-family: 'Khula', sans-serif;
+}
+.heading {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+}
+.subheading {
+  font-size: 14.3px;
+}
+svg > circle:hover {
+  stroke: black;
+  cursor: pointer;
+}
+.biker-name, .legend text {
+  font-size: 11.5px;
+}
+.tooltip {
+  background: #90CAF9;
+  box-shadow: 1.5px 2px 2px #b3b3b3;
+}
+.tooltip h4, .tooltip p {
+  margin: 0;
+}
+.tooltip p {
+  font-size: 11.5px;
+}
+.tooltip p:last-child {
+  margin-top: .4em;
+  line-height: 105%;
+}
+
+@media screen and (min-width: 600px) {
+  .heading {
+    font-size: 17px;
+  }
+}
