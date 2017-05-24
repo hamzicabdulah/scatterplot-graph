@@ -69,10 +69,11 @@ function draw(data) {
 
   let tooltip = svg.append('foreignObject')
     .attr('width', 220)
+    .attr('height', 200)
     .attr('x', docWidth <= 550 ? width * 0.3 : width * 0.6)
     .attr('y', height - 250)
     .append('xhtml:div')
-    .attr('class', 'tooltip');
+    .attr('class', 'tooltip')
 
   svg.selectAll('circle')
     .data(data)
