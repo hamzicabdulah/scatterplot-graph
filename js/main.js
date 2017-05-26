@@ -1,3 +1,5 @@
+d3.json('https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json', draw);
+
 function draw(data) {
   const docWidth = document.documentElement.clientWidth;
   const width = (docWidth <= 768) ? docWidth * 0.9 : 750;
@@ -118,6 +120,13 @@ function draw(data) {
     .attr('x', (margin * 1.2) + 8)
     .attr('y', (d) => d[2] + 4)
     .text((d) => d[1]);
+
+  window.onresize = function(event) {
+    clearScreen();
+    draw(data);
+  }
 }
 
-d3.json('https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json', draw);
+function clearScreen() {
+  d3.select('svg').remove();
+}
